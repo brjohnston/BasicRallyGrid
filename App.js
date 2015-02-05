@@ -3,7 +3,7 @@ Ext.define('CustomApp', {
     componentCls: 'app',
 	
 	launch: function() {
-		console.log('Our first App woot!');
+		//console.log('Our first App woot!');
 		
 		this._loadData();
 	},
@@ -16,7 +16,7 @@ Ext.define('CustomApp', {
 		autoLoad: true,
 		listeners: {
 			load: function(myStore, myData, success) {
-				console.log('got data!', myStore, myData,success);
+				//console.log('got data!', myStore, myData,success);
 				this._loadGrid(myStore);
 			},
 			scope: this
@@ -35,7 +35,7 @@ Ext.define('CustomApp', {
 		]
 	});
 	this.add(myGrid);
-	console.log('what is this?',this);
+	//console.log('what is this?',this);
 	}
 	
 });
