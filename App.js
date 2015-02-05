@@ -3,7 +3,7 @@ Ext.define('CustomApp', {
     componentCls: 'app',
 	
 	launch: function() {
-		//console.log('Our first App woot!');
+		console.log('My first app!');
 		
 		this._loadData();
 	},
