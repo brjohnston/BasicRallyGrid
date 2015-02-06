@@ -4,29 +4,24 @@ Ext.define('CustomApp', {
 	
 	launch: function() {
 		console.log('My first app!');
-		
 		this._loadData();
 	},
-	
 	// Get data from Rally
 	_loadData: function() {
 	
 	var myStore = Ext.create('Rally.data.wsapi.Store', {
 		model: 'User Story',
 		autoLoad: true,
-		autoCreateViewport: true,
 		listeners: {
 			load: function(myStore, myData, success) {
-				//console.log('got data!', myStore, myData,success);
+				console.log('got data!', myStore, myData,success);
 				this._loadGrid(myStore);
 			},
 			scope: this
 		},
 		fetch: ['FormattedID','Name','ScheduleState']
 	});
-
 	},
-	
 	// Create and Show a Grid of given stories
 	_loadGrid: function(myStoryStore) {
 	var myGrid = Ext.create('Rally.ui.grid.Grid', {
@@ -36,7 +31,7 @@ Ext.define('CustomApp', {
 		]
 	});
 	this.add(myGrid);
-	//console.log('what is this?',this);
+	console.log('what is this?',this);
 	}
 	
 });
